@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+		<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+		<meta name="keywords" content="{dede:field name='keywords'/}" />
+		<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+		<!--<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id/}">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id/}";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>-->
+		<link href="{dede:global.cfg_templets_skin/}/style/global.css" rel="stylesheet" type="text/css" />
+		<script src="{dede:global.cfg_templets_skin/}/js/jquery-1.11.1.min.js"></script>
+		<script src="{dede:global.cfg_templets_skin/}/js/comm.js"></script>
+		<style>
+			
+			.g-mt10 {
+				margin-top: 10px;
+			}
+			
+			.wrapper {
+				width: 1180px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.mod-screen .screen-box {
+			    background-color: #fff;
+			    border-bottom: 1px solid #f0f0f0;
+			    padding: 14px 18px 8px;
+			}
+			.mod-screen .screen-box span {
+			    line-height: 24px;
+			    height: 24px;
+			    width: 60px;
+			    float: left;
+			    color: #333;
+			}
+			.mod-screen .screen-box .screen-text {
+			    margin-left: 60px;
+			}
+			.mod-screen .screen-box .screen-text li {
+			    float: left;
+			    margin-right: 10px;
+			    margin-bottom: 6px;
+			}
+			.mod-screen .screen-box .screen-text li a {
+			    display: block;
+			    padding: 0 6px;
+			    height: 24px;
+			    line-height: 24px;
+			    font-size: 14px;
+			    color: #888;
+			}
+			.mod-screen .screen-box .screen-text .text-list li a {
+			    color: #333;
+			}
+			
+			.selected{
+				border: 1px solid #ddd;
+    			background: #eee;
+			}
+											
+		</style>
+	</head>
+
+	<body class="channel">
+		{dede:include filename="head2.htm"/}
+		<!-- /header -->
+		<!--<div class="wrapper-box">
+
+		
+	</div>-->
+		<div class="mod-buy">
+			<div class="mod-screen g-mt10">
+				<div class="wrapper clearfix">
+					<div class="screen-box clearfix">
+						<span>品牌</span>
+						<div class="screen-text">
+							<ul class="alpha clearfix" id="J_brandbtn">
+								<li>
+									<a href="javascript:;" class="" data-val="i">热门</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="A">A</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="B">B</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="C" class="on">C</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="D">D</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="F">F</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="G">G</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="H">H</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="J">J</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="K">K</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="L">L</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="M">M</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="N">N</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="O">O</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="Q">Q</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="R">R</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="S">S</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="W">W</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="X">X</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="Y">Y</a>
+								</li>
+								<li>
+									<a href="javascript:;" data-val="Z">Z</a>
+								</li>
+							</ul>
+							<ul class="text-list clearfix" id="J_brandlist">
+								<li style="display: none;">
+									<a href="/hot-b-57305.html" data-alpha="i">本田</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57500.html" data-alpha="i">丰田</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57411.html" data-alpha="i">大众</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57248.html" data-alpha="i">宝马</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57354.html" data-alpha="i">别克</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57279.html" data-alpha="i">奔驰</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57229.html" data-alpha="i">奥迪</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57891.html" data-alpha="i">荣威</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57772.html" data-alpha="i">马自达</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57864.html" data-alpha="i">日产</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57328.html" data-alpha="i">比亚迪</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57604.html" data-alpha="i">吉利</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57534.html" data-alpha="i">福特</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-58024.html" data-alpha="i">雪佛兰</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-126026.html" data-alpha="i">哈弗</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-58001.html" data-alpha="i">现代</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57686.html" data-alpha="i">雷克萨斯</a>
+								</li>
+								<li style="display: none;">
+									<a href="/hot-b-57563.html" data-alpha="i">广汽传祺</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="A" href="/hot-b-57229.html">奥迪</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="A" href="/hot-b-57215.html">阿尔法·罗密欧</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57265.html">保时捷</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57354.html">别克</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57272.html">北京</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-126283.html">北汽制造</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-126179.html">北汽威旺</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-126810.html">北汽新能源</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-126169.html">北汽绅宝</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-126546.html">北汽银翔</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57301.html">奔腾</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57279.html">奔驰</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-127130.html">宝沃</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57248.html">宝马</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-125808.html">宝骏</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57366.html">宾利</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-126211.html">巴博斯</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57305.html">本田</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57338.html">标致</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-57328.html">比亚迪</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="B" href="/hot-b-127635.html">比速汽车</a>
+								</li>
+								<li style="">
+									<a data-alpha="C" href="/hot-b-57375.html">昌河</a>
+								</li>
+								<li style="">
+									<a data-alpha="C" href="/hot-b-57384.html">长城</a>
+								</li>
+								<li style="">
+									<a data-alpha="C" href="/hot-b-57378.html">长安</a>
+								</li>
+								<li style="">
+									<a data-alpha="C" href="/hot-b-126292.html">长安商用</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-126042.html">DS</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-57477.html">东南</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-57464.html">东风</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-126335.html">东风小康</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-127364.html">东风风光</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-126500.html">东风风度</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-57474.html">东风风神</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-126388.html">东风风行</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-57411.html">大众</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="D" href="/hot-b-57446.html">道奇</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="F" href="/hot-b-57500.html">丰田</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="F" href="/hot-b-57534.html">福特</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="F" href="/hot-b-57490.html">菲亚特</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="G" href="/hot-b-57556.html">GMC</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="G" href="/hot-b-57563.html">广汽传祺</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="G" href="/hot-b-126157.html">观致</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="H" href="/hot-b-57594.html">华泰</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="H" href="/hot-b-126026.html">哈弗</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="H" href="/hot-b-127385.html">汉腾汽车</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="H" href="/hot-b-57571.html">海马</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="J" href="/hot-b-57612.html">Jeep</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="J" href="/hot-b-57604.html">吉利</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="J" href="/hot-b-57631.html">捷豹</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="J" href="/hot-b-57620.html">江淮</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="K" href="/hot-b-57666.html">克莱斯勒</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="K" href="/hot-b-57651.html">凯迪拉克</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="L" href="/hot-b-57682.html">劳斯莱斯</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="L" href="/hot-b-57725.html">林肯</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="L" href="/hot-b-57396.html">猎豹汽车</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="L" href="/hot-b-124659.html">理念</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="L" href="/hot-b-57756.html">路虎</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="L" href="/hot-b-57749.html">陆风</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="L" href="/hot-b-57686.html">雷克萨斯</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="M" href="/hot-b-57765.html">名爵</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="M" href="/hot-b-57788.html">玛莎拉蒂</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="M" href="/hot-b-57795.html">迷你MINI</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="M" href="/hot-b-57772.html">马自达</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="N" href="/hot-b-125802.html">纳智捷</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="O" href="/hot-b-57802.html">讴歌</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="Q" href="/hot-b-126073.html">启辰</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="Q" href="/hot-b-57823.html">奇瑞</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="Q" href="/hot-b-57838.html">起亚</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="R" href="/hot-b-57864.html">日产</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="R" href="/hot-b-57891.html">荣威</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="S" href="/hot-b-57639.html">smart</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="S" href="/hot-b-127717.html">SWM斯威汽车</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="S" href="/hot-b-57909.html">三菱</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="S" href="/hot-b-126162.html">上汽大通</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="S" href="/hot-b-57954.html">斯柯达</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="W" href="/hot-b-125976.html">五菱汽车</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="W" href="/hot-b-57979.html">沃尔沃</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="X" href="/hot-b-58001.html">现代</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="X" href="/hot-b-58024.html">雪佛兰</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="X" href="/hot-b-58044.html">雪铁龙</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="Y" href="/hot-b-57404.html">野马汽车</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="Z" href="/hot-b-58074.html">中华</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="Z" href="/hot-b-126491.html">之诺</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="Z" href="/hot-b-58085.html">众泰</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="Z" href="/hot-b-127041.html">知豆</a>
+								</li>
+								<li style="display: none;">
+									<a data-alpha="Z" href="/hot-b-126603.html">镇江飞驰</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="title mod-title clearfix">
+					<h3>热门团购车型</h3>
+				</div>
+				<div class="buy-box">
+					<ul class="clearfix">
+						<li>
+							<a href="/#">
+								<div class="pic">
+									<img src="http://img.auto318.com/carlogo75/57756.gif" alt="路虎">
+								</div>
+								<div class="price">
+									<span>￥<em >14.61万起</em>
+										<i class="icon"></i>
+										<b style="">4.38万</b> 
+                                    </span>
+								</div>
+								<div class="price-buy">
+									深圳路虎团购
+								</div>
+								<div class="bottom">
+									<p>
+										<label>已报名<em>  37</em>人</label>
+										<img src="http://img.auto318.com/carlogo75/57756.gif" />
+									</p>
+
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="/#">
+								<div class="pic">
+									<img src="http://img.auto318.com/carlogo75/57756.gif" alt="路虎">
+								</div>
+								<div class="price">
+									<span>￥<em >14.61万起</em>
+										<i class="icon"></i>
+										<b style="">4.38万</b> 
+                                    </span>
+								</div>
+								<div class="price-buy">
+									深圳路虎团购
+								</div>
+								<div class="bottom">
+									<p>
+										<label>已报名<em>  37</em>人</label>
+										<img src="http://img.auto318.com/carlogo75/57756.gif" />
+									</p>
+
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="/#">
+								<div class="pic">
+									<img src="http://img.auto318.com/carlogo75/57756.gif" alt="路虎">
+								</div>
+								<div class="price">
+									<span>￥<em >14.61万起</em>
+										<i class="icon"></i>
+										<b style="">4.38万</b> 
+                                    </span>
+								</div>
+								<div class="price-buy">
+									深圳路虎团购
+								</div>
+								<div class="bottom">
+									<p>
+										<label>已报名<em>  37</em>人</label>
+										<img src="http://img.auto318.com/carlogo75/57756.gif" />
+									</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="/cust-cid-1782.html">
+								<div class="pic">
+									<img src="http://img.auto318.com/carlogo75/57756.gif" alt="路虎">
+								</div>
+								<div class="price">
+									<span>￥<em >14.61万起</em>
+										<i class="icon"></i>
+										<b style="">4.38万</b> 
+                                    </span>
+								</div>
+								<div class="price-buy">
+									深圳路虎团购
+								</div>
+								<div class="bottom">
+									<p>
+										<label>已报名<em>  37</em>人</label>
+										<img src="http://img.auto318.com/carlogo75/57756.gif" />
+									</p>
+
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		{dede:include filename="footer.htm"/}
+		<!-- /footer -->
+
+	</body>
+
+</html>

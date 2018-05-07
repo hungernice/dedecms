@@ -1,0 +1,49 @@
+		<!-- header -->
+		<div class="header">
+			<div class="wrapper-box">
+				<div class="clearfix header-box">
+					<a href="/" class="logo g-fl">
+						<img width="210" height="38" src="http://s.img16888.com/dist/images/buy4/logo.png" alt="">
+					</a>
+					<div class="search g-fl">
+						<div class="clearfix">
+							<input type="text" class="search-text g-fl J__search_text" placeholder="输入品牌或车型" />
+							<input type="button" class="search-btn J__search_btn" value="搜索" />
+						</div>
+						<p class="g-f12">热门搜索：
+							<a href="#">雅阁</a>
+							<a href="#">冠道</a>
+							<a href="#">汉兰达</a>
+							<a href="#">奥德赛</a>
+							<a href="#">迈腾</a>
+							<a href="#">飞度</a>
+					</div>
+					<div class="feature g-fr g-f12">
+						<ul>
+							<li><i class="icon"></i>诚信</li>
+							<li class="t2"><i class="icon"></i>低价</li>
+							<li class="t3"><i class="icon"></i>安全</li>
+							<li class="t4"><i class="icon"></i>售后</li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav">
+					<ul class="clearfix">
+						<li class="category" id="J_headerCategory">
+							<a class="title title1" href="javascript:;">全部分类<b></b></a>
+
+						</li>
+						<li class="home">
+							<a class="selected link" href='{dede:global.cfg_cmsurl/}/'><span>首页</span></a>
+						</li>
+				      	{dede:channel type='top' row='10' currentstyle="<li class='hover'>
+				      		<a href='~typelink~' ~rel~ class=" link"><span>~typename~</span></a></li>"}
+				      	<li>
+				      		<a href='[field:typeurl/]' [field:rel/] class=" link"><span>[field:typename/]</span></a>
+				      	</li>
+				      	{/dede:channel}						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- header end -->
